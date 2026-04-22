@@ -4,6 +4,11 @@ on:
   push:
     tags:
       - "*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag à utiliser dans la release."
+        required: true
 
 permissions: {}
 
@@ -39,7 +44,7 @@ jobs:
         uses: actions/download-artifact@v8
       - name: Grab and store version
         run: |
-          tag_name=$(echo ${{ github.ref }} | grep -oE "[^/]+$")
+          tag_name="${{ github.event.inputs.tag || github.ref_name }}"
           echo "VERSION=$tag_name" >> $GITHUB_ENV
       - name: Package artifacts properly
         run: |
