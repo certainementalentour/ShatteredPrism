@@ -62,7 +62,7 @@
     <release version="@Launcher_VERSION_NAME@" date="@Launcher_BUILD_TIMESTAMP@"></release>
   </releases>
   <url type="homepage">https://prismlauncher.org/</url>
-  <url type="bugtracker">https://github.com/PrismLauncher/PrismLauncher/issues</url>
+  <url type="bugtracker"></url>
   <url type="faq">https://prismlauncher.org/wiki/overview/faq/</url>
   <url type="help">https://prismlauncher.org/wiki/</url>
   <url type="donation">https://opencollective.com/prismlauncher</url>
